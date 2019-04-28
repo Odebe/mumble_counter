@@ -10,7 +10,9 @@ mumble_counter intend for providing a users number of mumble server for xfce gen
 
 ## Usage
 
-TODO: Write usage instructions here
+1. Run command `mumble_counter server=your_mumble_server port=123(port is optional)`.
+2. Print full path to binary file `which mumble_counter`
+3. Add genmom plugin on panel and set command to `<full path to binary file> server=your_mumble_server`
 
 ## Development
 
