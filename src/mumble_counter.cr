@@ -39,6 +39,7 @@ module MumbleCounter
       begin
         adapter.connect
       rescue exception
+        # TODO: rescue custom error
         adapter.close
         return formatter.connection_error
       end
@@ -46,6 +47,7 @@ module MumbleCounter
       begin
         users_info = adapter.users_info
       rescue exception
+        # TODO: rescue custom error
         adapter.close
         return formatter.request_error
       end

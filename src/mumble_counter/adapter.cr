@@ -29,11 +29,10 @@ module MumbleCounter
     end
 
     # [0, 1, 0, 2] -> "102"
-    # TODO: lol, refactor later
     private def format_number(bytes)
       arr = bytes.to_a
-      arr.shift(arr.index { |e| !e.zero? }.to_s.to_i)
-      arr.join("")
+      index = arr.index { |e| !e.zero? }
+      index.is_a?(Nil) ? "0" : arr[index..-1].join("")
     end
 
     private def ping_message
